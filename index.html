@@ -4,14 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Elyx — Publier votre livre (tous genres) & BD | Accompagnement complet</title>
-  <meta name="description" content="Elyx accompagne auteurs et organisations pour publier romans, essais, jeunesse et BD : coaching, correction, maquette, illustrations, ISBN, Amazon KDP, Gumroad, pack marketing." />
+  <meta name="description" content="Elyx accompagne auteurs et organisations pour publier romans, essais, livres pro, jeunesse et BD : coaching, correction, maquette, illustrations, ISBN, Amazon KDP, Gumroad, pack marketing." />
   <meta property="og:title" content="Elyx — Publier votre livre & BD" />
   <meta property="og:description" content="De l’idée à la mise en vente : coaching, illustrations, maquette, ISBN, diffusion et lancement." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#2f2a6b" />
-  <!-- Favicon (tu peux garder favicon.svg à la racine) -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <style>
@@ -21,51 +19,44 @@
       --radius:18px; --shadow:0 10px 30px rgba(15,18,34,.12);
     }
     *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0; color:var(--ink); background:#fff; line-height:1.6;
-      font-family:"DM Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    body{margin:0;color:var(--ink);background:#fff;line-height:1.6;font-family:"DM Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     img{max-width:100%;display:block} a{color:var(--indigo);text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
     /* NAV */
-    .nav{position:sticky; top:0; z-index:50; background:#0f2136; border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{position:sticky;top:0;z-index:50;background:#0f2136;border-bottom:1px solid rgba(255,255,255,.08)}
     .nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;gap:10px;align-items:center;font-weight:800;color:#fff}
     .brand img{height:28px}
     .menu{display:flex;gap:18px;align-items:center}
     .menu a{font-weight:600;color:#cfe6ff}
-    .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:12px;
-      padding:12px 18px; border:0; cursor:pointer; transition:transform .04s ease, box-shadow .2s ease; box-shadow:var(--shadow)}
+    .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:12px;padding:12px 18px;border:0;cursor:pointer;transition:transform .04s ease,box-shadow .2s ease;box-shadow:var(--shadow)}
     .btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--gold);color:#111} .btn-primary:hover{background:var(--gold-700)}
+    .btn-primary{background:var(--gold);color:#111}.btn-primary:hover{background:var(--gold-700)}
     .btn-ghost{background:#fff;border:1px solid #e6e6ee;color:var(--indigo)}
 
     /* HERO */
     .hero{
-      background: radial-gradient(1200px 500px at 80% -30%, rgba(47,42,107,.10), transparent 60%),
-                  linear-gradient(180deg,#0f2136,#1d2f4f 70%, #23405f);
-      color:#fff; padding:70px 0 40px;
+      background:radial-gradient(1200px 500px at 80% -30%,rgba(47,42,107,.10),transparent 60%),linear-gradient(180deg,#0f2136,#1d2f4f 70%,#23405f);
+      color:#fff;padding:70px 0 40px
     }
-    .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
     .eyebrow{font-weight:700;letter-spacing:.08em;color:#9be5e8;text-transform:uppercase;font-size:.78rem}
-    h1{font-family:"Cormorant Garamond",serif; font-weight:700; line-height:1.1;
-      font-size:clamp(2.2rem,3.4vw,3.2rem); color:#fff}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:700;line-height:1.1;font-size:clamp(2.2rem,3.4vw,3.2rem);color:#fff}
     .lead{font-size:1.08rem;color:#e7f3ff}
     .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .badge{font-size:.82rem;font-weight:700;background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;color:#e7f3ff}
+    .badge{font-size:.82rem;font-weight:700;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;color:#e7f3ff}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-    .panel{background:#0d1b2b;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px; border:1px solid rgba(255,255,255,.12)}
-    .panel .shot{border-radius:14px;border:1px solid rgba(255,255,255,.2);background:#fff}
+    .panel{background:#0d1b2b;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;border:1px solid rgba(255,255,255,.12)}
+    .shot{border-radius:14px;border:1px solid rgba(255,255,255,.2);background:#fff}
 
     /* SECTIONS */
     section{padding:64px 0}
-    section .h2{font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--indigo);
-      font-size:clamp(1.6rem,2.4vw,2.2rem);margin:0 0 10px}
-    .kicker{color:var(--muted);margin-bottom:26px}
+    section .h2{font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--indigo);font-size:clamp(1.6rem,2.4vw,2.2rem);margin:0 0 10px}
+    .kicker{color:var(--muted);margin-bottom:22px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:#fff;border:1px solid #eee;border-radius:16px;padding:22px;box-shadow:0 10px 24px rgba(17,12,46,.07)}
-    .icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;margin-bottom:10px;
-      background:linear-gradient(135deg,var(--indigo),var(--teal)); color:#fff}
+    .icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;margin-bottom:10px;background:linear-gradient(135deg,var(--indigo),var(--teal));color:#fff}
 
     /* PROCESS */
     .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
@@ -83,47 +74,38 @@
     .table th,.table td{border:1px solid #ececf4;padding:10px}
 
     /* PORTFOLIO */
-    .masonry{columns:3 280px; column-gap:14px}
-    .masonry .shot{break-inside:avoid; border-radius:14px; border:1px solid #eee; margin:0 0 14px; background:#fafafa}
+    .masonry{columns:3 280px;column-gap:14px}
+    .masonry .tile{break-inside:avoid;border-radius:14px;border:1px solid #eee;margin:0 0 14px;background:#fff}
 
     /* TESTIMONIALS */
     .quotes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    blockquote{margin:0; padding:18px 20px; background:#fff; border-left:6px solid var(--teal);
-      border-radius:12px; box-shadow:0 10px 24px rgba(17,12,46,.06)}
+    blockquote{margin:0;padding:18px 20px;background:#fff;border-left:6px solid var(--teal);border-radius:12px;box-shadow:0 10px 24px rgba(17,12,46,.06)}
 
-    /* FAQ */
+    /* FAQ & CONTACT */
     details{border:1px solid #eee;border-radius:12px;padding:14px 16px;background:#fff}
     details+details{margin-top:10px}
     summary{cursor:pointer;font-weight:700;color:var(--indigo)}
-
-    /* CONTACT / FOOTER */
-    .contact{background:linear-gradient(180deg,var(--cream),#fff 70%); border-top:1px solid #eee}
+    .contact{background:linear-gradient(180deg,var(--cream),#fff 70%);border-top:1px solid #eee}
     .footer{padding:24px 0;border-top:1px solid #eee;color:#555;font-size:.94rem}
 
     /* WhatsApp flottant */
-    .wa-float{
-      position:fixed; right:18px; bottom:18px; z-index:60;
-      background:#25D366; color:#fff; border-radius:999px; padding:12px 16px;
-      box-shadow:0 8px 22px rgba(0,0,0,.18); font-weight:800;
-    }
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;border-radius:999px;padding:12px 16px;box-shadow:0 8px 22px rgba(0,0,0,.18);font-weight:800}
 
-    /* RESPONSIVE */
+    /* Responsive */
     @media (max-width:960px){
       .hero .grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr 1fr}
-      .tiers{grid-template-columns:1fr}
+      .grid-3,.tiers{grid-template-columns:1fr}
       .quotes{grid-template-columns:1fr}
       .menu{display:none}
     }
   </style>
 </head>
 <body>
+
   <!-- NAV -->
   <nav class="nav">
     <div class="wrap inner">
       <div class="brand">
-        <!-- Si tu as uploadé assets/elyx-logo.png, il s’affichera -->
         <img src="assets/elyx-logo.png" alt="Elyx" onerror="this.style.display='none'">
         <span>Elyx — Édition & BD (tous genres)</span>
       </div>
@@ -146,10 +128,7 @@
         <div>
           <div class="eyebrow">Accompagnement auteur complet</div>
           <h1>Publier votre livre (tous genres) & votre BD — du manuscrit à la mise en vente</h1>
-          <p class="lead">
-            Coaching éditorial, correction, <strong>illustrations</strong>, maquette pro, <strong>ISBN</strong>,
-            diffusion <strong>Amazon KDP</strong> & <strong>Gumroad</strong>, et pack marketing.
-          </p>
+          <p class="lead">Coaching éditorial, correction, <strong>illustrations</strong>, maquette pro, <strong>ISBN</strong>, diffusion <strong>Amazon KDP</strong> & <strong>Gumroad</strong>, plus un pack marketing sobre et efficace.</p>
           <div class="badges">
             <span class="badge">Romans & Essais</span>
             <span class="badge">Pro & Méthode</span>
@@ -161,11 +140,10 @@
           </div>
         </div>
         <div class="panel">
-          <!-- Si tu as uploadé assets/pack-2-livres.png, on l’affiche -->
           <img class="shot" src="assets/pack-2-livres.png" alt="Pack 2 livres Elyx" onerror="this.style.display='none'">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-            <img class="shot" src="mockup-book.png" alt="Mockup couverture de livre">
-            <img class="shot" src="mockup-bd.png" alt="Mockup planches BD">
+            <img class="shot" src="mockup-book.png" alt="Couverture type">
+            <img class="shot" src="mockup-bd.png" alt="Planches BD type">
           </div>
         </div>
       </div>
@@ -179,7 +157,7 @@
       <p class="kicker">Écrire • Relire • Illustrer • Maquetter • Publier • Lancer</p>
       <div class="grid-3">
         <div class="card">
-          <div class="icon" aria-hidden="true">✍️</div>
+          <div class="icon">✍️</div>
           <h3>Accompagnement éditorial</h3>
           <ul>
             <li>Diagnostic de manuscrit & feuille de route</li>
@@ -188,7 +166,7 @@
           </ul>
         </div>
         <div class="card">
-          <div class="icon" aria-hidden="true">🎨</div>
+          <div class="icon">🎨</div>
           <h3>Design & Illustrations</h3>
           <ul>
             <li>Couverture pro (KDP/print)</li>
@@ -197,12 +175,12 @@
           </ul>
         </div>
         <div class="card">
-          <div class="icon" aria-hidden="true">🚀</div>
+          <div class="icon">🚀</div>
           <h3>Publication & Lancement</h3>
           <ul>
             <li>ISBN + code-barres, métadonnées</li>
             <li>Amazon KDP & Gumroad/Payhip</li>
-            <li>Pack marketing (mockups, 5 posts, mini-teaser)</li>
+            <li>Pack marketing (mockups, 5 visuels, 5 posts)</li>
           </ul>
         </div>
       </div>
@@ -215,9 +193,9 @@
       <h2 class="h2">Tous genres acceptés</h2>
       <p class="kicker">Roman, nouvelle, essai, livre pratique/pro, jeunesse (6–9 ans), album illustré, <strong>BD</strong> & webtoon.</p>
       <div class="grid-3">
-        <div class="card"><strong>Romans & Nouvelles</strong><br/>Voix, rythme, cohérence narrative.</div>
-        <div class="card"><strong>Essais & Méthodes</strong><br/>Plan logique, titres marketing, références.</div>
-        <div class="card"><strong>Jeunesse & BD</strong><br/>Direction artistique, cohérence personnages, mise en cases.</div>
+        <div class="card"><strong>Romans & Nouvelles</strong><br>Voix, rythme, cohérence narrative.</div>
+        <div class="card"><strong>Essais & Méthodes</strong><br>Plan logique, titres marketing, références.</div>
+        <div class="card"><strong>Jeunesse & BD</strong><br>Direction artistique, cohérence personnages, mise en cases.</div>
       </div>
     </div>
   </section>
@@ -226,11 +204,11 @@
   <section id="publication">
     <div class="wrap">
       <h2 class="h2">Publication & diffusion</h2>
-      <p class="kicker">On s’occupe des aspects techniques pour un lancement sans stress.</p>
+      <p class="kicker">Nous gérons le technique, vous gardez la main sur les décisions.</p>
       <div class="grid-3">
-        <div class="card">Attribution <strong>ISBN</strong> + code-barres, dépôts et métadonnées.</div>
+        <div class="card"><strong>ISBN</strong> + code-barres, dépôts et métadonnées.</div>
         <div class="card">Mise en ligne <strong>Amazon KDP</strong> + <strong>Gumroad</strong> (titres, catégories, mots-clés).</div>
-        <div class="card">Visuels de lancement, <strong>mockups</strong>, mini-bande-annonce & 5 posts prêts à publier.</div>
+        <div class="card">Visuels de lancement, mockups, et 5 posts prêts à publier.</div>
       </div>
     </div>
   </section>
@@ -240,11 +218,11 @@
     <h2 class="h2">Processus en 5 étapes</h2>
     <p class="kicker">Cadre clair, points de contrôle, livrables à chaque phase.</p>
     <div class="steps">
-      <div class="step"><strong>1. Découverte</strong><br/>15–20 min pour cadrer besoins & objectifs.</div>
-      <div class="step"><strong>2. Plan d’action</strong><br/>Diagnostic + feuille de route partagée.</div>
-      <div class="step"><strong>3. Production</strong><br/>Texte / illustrations / maquette.</div>
-      <div class="step"><strong>4. Contrôles</strong><br/>BAT, vérifs KDP/ebook, corrections finales.</div>
-      <div class="step"><strong>5. Lancement</strong><br/>Mise en vente + kit marketing.</div>
+      <div class="step"><strong>1. Découverte</strong><br>15–20 min pour cadrer besoins & objectifs.</div>
+      <div class="step"><strong>2. Plan d’action</strong><br>Diagnostic + feuille de route partagée.</div>
+      <div class="step"><strong>3. Production</strong><br>Texte / illustrations / maquette.</div>
+      <div class="step"><strong>4. Contrôles</strong><br>BAT, vérifs KDP/ebook, corrections finales.</div>
+      <div class="step"><strong>5. Lancement</strong><br>Mise en vente + kit marketing.</div>
     </div>
   </section>
 
@@ -252,23 +230,23 @@
   <section id="tarifs" class="pricing">
     <div class="wrap">
       <h2 class="h2">Tarifs & prise de contact</h2>
-      <p class="kicker">Formules transparentes + prestations à la carte. Pour réserver ou poser une question : <a href="https://wa.me/33744896245" target="_blank" rel="noopener"><strong>WhatsApp direct</strong></a> ou <a href="tel:+33744896245"><strong>appel</strong></a>.</p>
+      <p class="kicker">Transparents et modulables. Pour réserver ou poser une question : <a href="https://wa.me/33744896245" target="_blank" rel="noopener"><strong>WhatsApp direct</strong></a> ou <a href="tel:+33744896245"><strong>appel</strong></a>.</p>
 
       <div class="tiers">
         <div class="tier">
           <h3>🟢 Starter</h3>
-          <p class="price">39 €</p>
+          <p class="price">29 €</p>
           <ul>
             <li>Atelier 1h30 : 7 étapes pour publier</li>
             <li>Check-lists & modèles (synopsis, plan, pitch)</li>
           </ul>
-          <p class="note">Idéal pour démarrer vite et bien.</p>
+          <p class="note">Pour démarrer vite et bien.</p>
           <a class="btn btn-ghost" href="https://wa.me/33744896245" target="_blank" rel="noopener">Parler sur WhatsApp</a>
         </div>
 
         <div class="tier" style="border:2px solid var(--indigo)">
           <h3>🟡 Auteur accompagné</h3>
-          <p class="price">349 € · 3 séances<br/>549 € · 5 séances</p>
+          <p class="price">299 € · 3 séances<br>499 € · 5 séances</p>
           <ul>
             <li>Coaching 1:1 (60 min / séance)</li>
             <li>Relecture/correction légère incluse</li>
@@ -279,62 +257,62 @@
 
         <div class="tier">
           <h3>🔴 Clé en main</h3>
-          <p class="price">à partir de 1 490 €</p>
+          <p class="price">à partir de 990 €</p>
           <ul>
-            <li>Écriture guidée + maquette + ISBN + KDP</li>
-            <li><strong>Avec illustrations (hybride IA+DA)</strong> : dès 2 490 €</li>
-            <li><strong>Avec illustrateur pro</strong> : dès 3 990 €</li>
+            <li>Texte finalisé + maquette + ISBN + KDP</li>
+            <li><strong>Option illustrations (hybride IA+DA)</strong> : + 300 € (pack de base)</li>
+            <li><strong>Option illustrateur pro</strong> : sur devis</li>
           </ul>
           <p class="note">Option BD : storyboard, mise en cases, lettrage, export print/webtoon.</p>
-          <a class="btn btn-ghost" href="mailto:prosimonnepelamie@gmail.com">Demander un devis par e-mail</a>
+          <a class="btn btn-ghost" href="mailto:prosimonnepelamie@gmail.com">Demander un devis</a>
         </div>
       </div>
 
       <h3 style="margin-top:28px">Prestations à la carte</h3>
       <table class="table">
         <tr><th>Service</th><th>Détail</th><th>Tarif indicatif</th></tr>
+        <tr><td>Conception d’illustration (simple)</td><td>Élément/vignette, style cohérent</td><td><strong>2 € / dessin</strong></td></tr>
+        <tr><td>Illustration pleine page</td><td>Couleur, jeunesse ou éditorial</td><td><strong>20–60 €</strong></td></tr>
+        <tr><td>Planche BD (6–9 cases)</td><td>Encrage + couleur + lettrage</td><td><strong>35–90 €</strong></td></tr>
+        <tr><td>Storyboard BD (par page)</td><td>Cadrage & rythme</td><td><strong>10 €</strong></td></tr>
         <tr><td>Correction / relecture</td><td>Orthotypo + légères reformulations</td><td><strong>4,5 € / 1 000 mots</strong></td></tr>
         <tr><td>Maquette intérieure</td><td>Print (KDP/POD) ou ebook (EPUB/PDF)</td><td><strong>3 € / page</strong></td></tr>
-        <tr><td>Couverture</td><td>Concept + design prêt KDP</td><td><strong>180 €</strong></td></tr>
+        <tr><td>Couverture</td><td>Concept + design prêt KDP</td><td><strong>120 €</strong></td></tr>
         <tr><td>ISBN + code-barres</td><td>Démarches & fichiers</td><td><strong>35 €</strong></td></tr>
-        <tr><td>Mise en ligne KDP</td><td>Catégories, mots-clés, paramètres</td><td><strong>120 €</strong></td></tr>
-        <tr><td>Pack lancement</td><td>Mockups, 5 visuels, 5 posts, mini-teaser</td><td><strong>150 €</strong></td></tr>
+        <tr><td>Mise en ligne KDP</td><td>Catégories, mots-clés, paramètres</td><td><strong>90 €</strong></td></tr>
+        <tr><td>Pack lancement</td><td>Mockups, 5 visuels, 5 posts</td><td><strong>120 €</strong></td></tr>
       </table>
-      <p class="note" style="margin-top:10px">Les tarifs peuvent varier selon volume, complexité et délais. Devis précis après appel découverte.</p>
+      <p class="note" style="margin-top:10px">Prix indicatifs, ajustés selon volume et complexité. Devis rapide après échange.</p>
     </div>
   </section>
 
   <!-- PORTFOLIO -->
   <section id="portfolio" class="wrap">
     <h2 class="h2">Portfolio (exemples)</h2>
-    <p class="kicker">Couvs, doubles pages, extraits de planches.</p>
+    <p class="kicker">Couvs, doubles pages, extraits de planches. (Les images ci-dessous sont des aperçus types.)</p>
     <div class="masonry">
-      <img class="shot" src="mockup-book.png" alt="Couverture livre">
-      <img class="shot" src="mockup-bd.png" alt="Extrait planches BD">
-      <img class="shot" src="assets/pack-2-livres.png" alt="Pack 2 livres Elyx" onerror="this.style.display='none'">
+      <img class="tile" src="assets/pack-2-livres.png" alt="Pack 2 livres Elyx" onerror="this.style.display='none'">
+      <img class="tile" src="mockup-book.png" alt="Couverture type">
+      <img class="tile" src="mockup-bd.png" alt="Extrait planches BD">
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- TEMOIGNAGES -->
   <section class="wrap">
     <h2 class="h2">Ils en parlent</h2>
     <div class="quotes">
-      <blockquote>« J’ai publié mon premier conte en 6 semaines, prêt pour Amazon ! » — <strong>Prénom N.</strong></blockquote>
-      <blockquote>« La cohérence des illustrations a tout changé. » — <strong>Auteure jeunesse</strong></blockquote>
+      <blockquote>« Process clair, corrections utiles et mise en ligne sans stress. » — <strong>Auteur auto-édité</strong></blockquote>
+      <blockquote>« Bonne cohérence graphique pour la série BD, et délais tenus. » — <strong>Client pro</strong></blockquote>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="wrap">
     <h2 class="h2">FAQ</h2>
-    <details><summary>Je n’ai qu’une idée, vous pouvez m’aider ?</summary>
-      <p>Oui. On structure l’idée, on bâtit le plan et on installe un calendrier simple pour avancer.</p></details>
-    <details><summary>Gérez-vous les ISBN et code-barres ?</summary>
-      <p>Oui, nous les gérons (ou accompagnement pas à pas selon le pays).</p></details>
-    <details><summary>Et si je veux une BD ?</summary>
-      <p>Storyboard, design personnages, mise en cases, lettrage et exports (print & webtoon).</p></details>
-    <details><summary>Paiement en plusieurs fois ?</summary>
-      <p>Oui, sur devis, avec échéancier clair.</p></details>
+    <details><summary>Je n’ai qu’une idée, vous pouvez m’aider ?</summary><p>Oui. On structure l’idée, on bâtit un plan et un calendrier simple pour avancer.</p></details>
+    <details><summary>Gérez-vous les ISBN et code-barres ?</summary><p>Oui, nous les gérons ou vous guidons pas à pas selon votre pays.</p></details>
+    <details><summary>Et si je veux une BD ?</summary><p>Storyboard, design personnages, mise en cases, lettrage et exports (print & webtoon).</p></details>
+    <details><summary>Paiement en plusieurs fois ?</summary><p>Oui, possible selon la formule choisie.</p></details>
   </section>
 
   <!-- CONTACT -->
@@ -347,17 +325,17 @@
         <a class="btn btn-ghost" href="https://wa.me/33744896245" target="_blank" rel="noopener">💬 WhatsApp</a>
         <a class="btn btn-ghost" href="mailto:prosimonnepelamie@gmail.com">✉️ prosimonnepelamie@gmail.com</a>
       </div>
-      <p class="note">Si le lien WhatsApp ne s’ouvre pas, enregistrez d’abord le numéro.</p>
+      <p class="note">Si le lien WhatsApp ne s’ouvre pas, enregistrez d’abord le numéro dans vos contacts.</p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="wrap">
-      © 2025 <strong>Elyx</strong> — Éditrice & cheffe de projet digital — Accompagnement à la publication (tous genres) & BD — ISBN — Amazon KDP — Gumroad
+      © 2025 <strong>Elyx</strong> — Édition & BD — Accompagnement publication (tous genres) — ISBN — Amazon KDP — Gumroad
     </div>
   </footer>
 
-  <!-- Bouton WhatsApp flottant toujours visible -->
+  <!-- Bouton WhatsApp flottant -->
   <a class="wa-float" href="https://wa.me/33744896245" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">WhatsApp</a>
 </body>
 </html>
